@@ -1,5 +1,5 @@
-import type { ToolRequest, ToolResponse } from "./envelopes";
-import { evaluateToolPolicy } from "./policy";
+import type { ToolRequest, ToolResponse } from "./envelopes.js";
+import { evaluateToolPolicy } from "./policy.js";
 
 export type ToolTransport = (req: ToolRequest) => Promise<ToolResponse>;
 

@@ -1,4 +1,4 @@
-import type { ToolRequest, ToolResponse } from "../envelopes";
+import type { ToolRequest, ToolResponse } from "../envelopes.js";
 
 export type HttpTransportConfig = {
   baseUrl: string;

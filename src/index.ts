@@ -14,4 +14,4 @@ export * from "./exec/types.js";
 export * from "./exec/registry.js";
 export * from "./exec/dispatch.js";
 export * from "./exec/intake.js";
-export * as mcp from "./mcp";
+export * as mcp from "./mcp/index.js";
