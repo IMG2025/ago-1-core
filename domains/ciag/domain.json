@@ -1,0 +1,11 @@
+{
+  "domain_id": "ciag",
+  "owner": "CIAG",
+  "status": "FROZEN",
+  "supported_task_types": ["ANALYZE", "ESCALATE"],
+  "required_scopes": {
+    "EXECUTE": [],
+    "ANALYZE": ["task:analyze"],
+    "ESCALATE": ["task:escalate"]
+  }
+}

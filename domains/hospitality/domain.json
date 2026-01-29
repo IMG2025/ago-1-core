@@ -1,0 +1,11 @@
+{
+  "domain_id": "hospitality",
+  "owner": "CHC",
+  "status": "ACTIVE",
+  "supported_task_types": ["EXECUTE", "ANALYZE", "ESCALATE"],
+  "required_scopes": {
+    "EXECUTE": ["task:execute", "hospitality:execute"],
+    "ANALYZE": ["task:analyze"],
+    "ESCALATE": ["task:escalate"]
+  }
+}
