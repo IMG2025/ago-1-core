@@ -1,4 +1,4 @@
-import { evaluateToolPolicy } from "./policy";
+import { evaluateToolPolicy } from "./policy.js";
 export async function callTool(transport, req) {
     const t0 = Date.now();
     const policy = evaluateToolPolicy(req);
