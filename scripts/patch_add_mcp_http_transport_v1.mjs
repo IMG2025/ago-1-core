@@ -25,14 +25,14 @@ function main() {
 
   const changed = [];
 
-  const httpTransportPath = p("src", "mcp", "transports", "httpTransport.ts");
-  const transportIndexPath = p("src", "mcp", "transports", "index.ts");
   const mcpIndexPath = p("src", "mcp", "index.ts");
-
   if (!exists(mcpIndexPath)) {
     console.error("ERROR: src/mcp/index.ts missing. Apply MCP Phase 1 first.");
     process.exit(1);
   }
+
+  const httpTransportPath = p("src", "mcp", "transports", "httpTransport.ts");
+  const transportIndexPath = p("src", "mcp", "transports", "index.ts");
 
   const httpTransport = `import type { ToolRequest, ToolResponse } from "../envelopes";
 

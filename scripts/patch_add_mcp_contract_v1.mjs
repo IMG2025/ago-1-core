@@ -31,18 +31,20 @@ function ensureLineInFile(fp, line) {
 function main() {
   console.log("== ago-1-core: MCP Phase 1 (Contract + Scaffolding) ==");
 
-  const contract = `# MCP Tool Contract (Core / Nexus Plane)
+  const changed = [];
+
+  const contract = `# MCP Tool Contract (ago-1-core / Nexus Plane)
 
 ## Purpose
-MCP is the **standard tool interface plane** between:
-- **Agents** (AGO-1 variants)
-- **Orchestration** (Nexus / Core)
-- **Governance** (Sentinel)
-- **Tool Providers** (MCP Servers)
+Model Context Protocol (MCP) is the standard tool interface plane between:
+- Agents (AGO-1 variants)
+- Orchestration (Core/Nexus)
+- Governance (Sentinel)
+- Tool Providers (MCP Servers)
 
-## Non-Negotiable Rule
+## Rule
 Agents do not integrate directly with external systems.
-All tool access flows via **Core/Nexus MCP Gateway → MCP Server**, governed by Sentinel.
+All tool access flows via Core/Nexus MCP Gateway → MCP Server, governed by Sentinel.
 
 ## Envelope
 ToolRequest: { tool, args, ctx { tenant, actor, purpose, classification, traceId } }
@@ -50,16 +52,15 @@ ToolResponse: { ok, data|error, meta { traceId, durationMs } }
 
 ## Policy
 Default-deny. Phase 1 allows only shared.* tools.
-
 `;
+
   const namespaces = `# MCP Tool Namespaces
-- shared.* (cross-domain)
-- chc.* (CHC Ops)
-- ciag.* (CIAG)
-- hospitality.* (Hospitality)
+- shared.*
+- chc.*
+- ciag.*
+- hospitality.*
 `;
 
-  const changed = [];
   if (writeIfChanged(p("docs", "MCP_TOOL_CONTRACT.md"), contract)) changed.push("docs/MCP_TOOL_CONTRACT.md");
   if (writeIfChanged(p("docs", "MCP_TOOL_NAMESPACES.md"), namespaces)) changed.push("docs/MCP_TOOL_NAMESPACES.md");
 
