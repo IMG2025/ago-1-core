@@ -18,7 +18,8 @@
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    }
+    },
+    "./mcp": "./dist/mcp/index.js"
   },
   "files": [
     "dist"
