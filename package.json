@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "mcp:smoke12": "node scripts/mcp_smoke_phase12.mjs"
   },
   "devDependencies": {
     "@types/node": "^25.0.10",
