@@ -11,7 +11,7 @@
     "mcp:smoke13": "node scripts/mcp_smoke_phase13.mjs"
   },
   "devDependencies": {
-    "@types/node": "^25.0.10",
+    "@types/node": "^25.3.0",
     "typescript": "^5.6.3"
   },
   "main": "./dist/index.js",
