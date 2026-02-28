@@ -1,0 +1,11 @@
+.env
+.env.*
+*.tar.gz
+*.zip
+*.backup
+frontend.backup/
+*.pem
+*.key
+*.p12
+.DS_Store
+infrastructure_audit_report_*.md
